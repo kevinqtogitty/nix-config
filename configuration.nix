@@ -9,7 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
-  
+
   # Enable Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # Bootloader.
@@ -52,7 +52,7 @@
 	 input = {
  	   General = {
              UserspaceHID = true;
-	   };	
+	   };
          };
     };
   };
@@ -134,42 +134,7 @@
   nixpkgs.config.allowUnfree = true;
 
   # Shell Configuration
-
-  programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
-    zed-editor
-    docker-compose
-    docker
-    git
-    zsh
-    wezterm
-    tmux
-    github-copilot-cli
-    base16-shell-preview
-    fastfetch
-    chromium
-    brave 
-    vial
-   # Languages
-    ruby
-    nodejs
-    python3
-  ];
-  environment.variables = {
-    EDITOR = "zed-editor";
-    SUDO_EDITOR = "vim";
-    ZED_ALLOW_ROOT = "true";
-  };
-
-  fonts.packages = with pkgs; [
-    nerd-fonts.meslo-lg
-  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -197,6 +162,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.11"; # Did you read the comment?
-
 }
-
