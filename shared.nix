@@ -2,19 +2,34 @@
   environment.systemPackages = with pkgs; [
     vim
     wget
+    bat
     git
     zsh
     wezterm
     tmux
     zed-editor
     github-copilot-cli
-    fastfetch
+    nerdfetch
     docker
     docker-compose
     base16-shell-preview
     gitmoji-cli
     stow
     starship
+    cowsay
+
+    # Plugins
+    nodePackages.typescript-language-server
+    solargraph
+    gopls
+
+    # Vim Plugins
+    vimPlugins.vim-plug
+
+    # Telescope tools
+    ripgrep
+    fd
+    fzf
 
     # ZSH plugins
     zsh-autosuggestions
