@@ -13,6 +13,7 @@
     docker-compose
     base16-shell-preview
     gitmoji-cli
+    stow
     # Languages
     nodejs
     python3
