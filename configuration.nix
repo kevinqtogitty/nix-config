@@ -127,8 +127,11 @@
     ];
   };
 
-  # Install firefox.
+  # Enable firefox.
   programs.firefox.enable = true;
+  
+  # Enable Starship
+  programs.starship.enable = true; 
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
