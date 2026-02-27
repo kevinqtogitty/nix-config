@@ -14,6 +14,8 @@
     base16-shell-preview
     gitmoji-cli
     stow
+    starship
+
     # Languages
     nodejs
     python3
