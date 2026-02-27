@@ -16,6 +16,10 @@
     stow
     starship
 
+    # ZSH plugins
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+
     # Languages
     nodejs
     python3

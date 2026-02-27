@@ -10,13 +10,17 @@
   outputs = { self, nixpkgs, nix-darwin, ... }@inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       modules = [
-	      ./configuration.nix
-				./shared.nix
-	    ];
+	 ./nixos-configuration.nix
+ 	 ./shared.nix
+      ];
     };
-    darwinConfigurations.my-macbook = nix-darwin.lib.darwinSystem {
+
+    darwinConfigurations.Kevins-MacBook-Air-2 = nix-darwin.lib.darwinSystem {
       system = "aarch64-darwin";
-      modules = [ ./darwin-configuration.nix ];
+      modules = [
+	 ./darwin-configuration.nix
+	 ./shared.nix
+      ];
     };
   };
 }
