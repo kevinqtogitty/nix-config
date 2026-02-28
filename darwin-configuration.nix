@@ -6,6 +6,8 @@
   # Set your system state version
   system.stateVersion = 5;
 
+  environment.pathsToLink = [ "/share/zsh-syntax-highlighting" ];
+
   # Your username
   users.users.kevinto = {
     name = "kevinto";
