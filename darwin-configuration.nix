@@ -5,6 +5,7 @@
 
   # Set your system state version
   system.stateVersion = 5;
+  system.primaryUser = "kevinto";
 
   environment.pathsToLink = [ "/share/zsh-syntax-highlighting" ];
 

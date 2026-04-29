@@ -7,7 +7,6 @@
     zsh
     wezterm
     tmux
-    zed-editor
     github-copilot-cli
     nerdfetch
     docker
@@ -17,6 +16,8 @@
     stow
     starship
     cowsay
+    ncurses
+    bruno
 
     # Plugins
     nodePackages.typescript-language-server
@@ -47,9 +48,8 @@
   ];
 
   environment.variables = {
-    EDITOR = "zed-editor";
+    EDITOR = "vim";
     SUDO_EDITOR = "vim";
-    ZED_ALLOW_ROOT = "true";
   };
 
   programs.zsh.enable = true;
