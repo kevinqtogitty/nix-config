@@ -6,7 +6,6 @@
     git
     zsh
     wezterm
-    tmux
     github-copilot-cli
     nerdfetch
     docker
@@ -18,6 +17,7 @@
     cowsay
     ncurses
     bruno
+    delta
 
     # Plugins
     nodePackages.typescript-language-server
