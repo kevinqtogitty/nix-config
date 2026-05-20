@@ -6,7 +6,6 @@
     git
     zsh
     wezterm
-    github-copilot-cli
     nerdfetch
     docker
     docker-compose
@@ -18,9 +17,10 @@
     ncurses
     bruno
     delta
+    zed-editor
 
     # Plugins
-    nodePackages.typescript-language-server
+    typescript-language-server
     solargraph
     gopls
 
