@@ -15,12 +15,14 @@
     starship
     cowsay
     ncurses
-    bruno
     delta
-    jetbrains.pycharm
+    postman
+    tilt
     zed-editor
     _1password-cli
     _1password-gui
+    obsidian
+    ffmpeg
 
     # Plugins
     typescript-language-server
@@ -47,11 +49,16 @@
     # lang version manager
     pyenv
 
+    # Build dependencies
+    pkg-config
+    libmysqlclient
+
     # AI Tools
     claude-code
 
     # Misc
     spotify
+    direnv
   ];
 
   fonts.packages = with pkgs; [

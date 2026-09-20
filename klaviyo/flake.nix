@@ -25,6 +25,7 @@
 
         # 2. Hardcode your Mac's system settings right here
         ({ pkgs, ... }: {
+          nix.enable = false;
       	  system.configurationRevision = self.rev or self.dirtyRev or null;
           programs.zsh.enable = true;
           programs.zsh.enableSyntaxHighlighting = true;
@@ -32,7 +33,43 @@
 
           # FIX: This line maps your macOS user account directly to nix-darwin's environment
           nixpkgs.config.allowUnfree = true;
+          system.primaryUser = "kevin.to";
           users.users."kevin.to".home = "/Users/kevin.to";
+
+          environment.systemPackages = [
+            (pkgs.writeShellScriptBin "gortex" ''
+              exec /Users/kevin.to/other-repos/gortex-native-patch/gortex "$@"
+            '')
+          ];
+
+          homebrew = {
+            enable = true;
+            taps = [
+              "zzet/tap"
+            ];
+            casks = [
+              "pycharm"
+              "sequel-ace"
+            ];
+          };
+
+          launchd.user.agents.gortex = {
+            serviceConfig = {
+              ProgramArguments = [
+                "/Users/kevin.to/other-repos/gortex-native-patch/gortex"
+                "daemon"
+                "start"
+                "--tools=readonly"
+                "--http-addr"
+                "127.0.0.1:7411"
+              ];
+              RunAtLoad = true;
+              KeepAlive = true;
+              ProcessType = "Background";
+              StandardOutPath = "/Users/kevin.to/.gortex/cache/launchd.stdout.log";
+              StandardErrorPath = "/Users/kevin.to/.gortex/cache/launchd.stderr.log";
+            };
+          };
        })
       ];
     };
