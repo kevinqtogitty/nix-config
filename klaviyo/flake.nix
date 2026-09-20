@@ -31,6 +31,7 @@
           system.stateVersion = 5;
 
           # FIX: This line maps your macOS user account directly to nix-darwin's environment
+          nixpkgs.config.allowUnfree = true;
           users.users."kevin.to".home = "/Users/kevin.to";
        })
       ];

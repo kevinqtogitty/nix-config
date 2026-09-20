@@ -17,7 +17,10 @@
     ncurses
     bruno
     delta
+    jetbrains.pycharm
     zed-editor
+    _1password-cli
+    _1password-gui
 
     # Plugins
     typescript-language-server
@@ -40,6 +43,15 @@
     nodejs
     python3
     ruby
+
+    # lang version manager
+    pyenv
+
+    # AI Tools
+    claude-code
+
+    # Misc
+    spotify
   ];
 
   fonts.packages = with pkgs; [
